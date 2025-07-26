@@ -13,7 +13,7 @@ export default function App() {
   const debounceValue = useDebounce(query, 500);
 
   return (
-    <main className="min-h-screen bg-neutral-900 pb-10">
+    <main className="min-h-screen bg-neutral-900 pb-10 overflow-x-hidden">
       <Navbar />
       {debounceValue.length === 0 && (
         <>

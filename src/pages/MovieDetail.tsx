@@ -22,7 +22,7 @@ const MovieDetailPage = () => {
   }, [id]);
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
       <div
         key={id}
@@ -177,7 +177,7 @@ const MovieDetailPage = () => {
           </>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -18,7 +18,7 @@ const GenresPage = ()=>{
 
     const title  = genre?.split("-").join(" ")
     return (
-        <>
+        <div className="overflow-x-hidden">
         <Navbar/>
         <div className="bg-neutral-900 min-h-screen text-white flex flex-col items-center gap-5 py-5">
             <h1 className="text-2xl font-bold">More from {title} keyword</h1>
@@ -26,7 +26,7 @@ const GenresPage = ()=>{
                 {isLoading? (Array.from({length: 10}).map((_, i)=> <MovieSkeleton key={i}/>)): (movies?.results.map((movie: Movie) => <MovieCard key={movie.id} movie={movie} />))}
             </div>
         </div>
-        </>
+        </div>
     )
 }
 

@@ -14,28 +14,29 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage/>
+    errorElement: <ErrorPage />,
   },
   {
     path: "/about",
-    element: <AboutPage/>
-  }
-  ,
+    element: <AboutPage />,
+  },
   {
     path: "/movie/:id",
-    element: <MovieDetailPage />
+    element: <MovieDetailPage />,
   },
   {
     path: "/genre/:genre",
-    element: <GenresPage />
-  }
+    element: <GenresPage />,
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <SearchProvider>
-      <RouterProvider router={router}></RouterProvider>
-      <Footer />
+      <div className="overflow-hidden">
+        <RouterProvider router={router}></RouterProvider>
+        <Footer />
+      </div>
     </SearchProvider>
   </StrictMode>
 );
