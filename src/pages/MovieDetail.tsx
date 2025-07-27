@@ -47,11 +47,14 @@ const MovieDetailPage = () => {
                   alt=""
                   className="brightness-50 w-full h-[600px] object-cover"
                 />
-                <img
-                  src={`https://image.tmdb.org/t/p/w154/${movie?.production_companies[0].logo_path}`}
-                  alt=""
-                  className="absolute z-50 top-5 right-10  p-2 rounded-full"
-                />
+                {movie?.production_companies[0].logo_path && (
+                  <img
+                    src={`https://image.tmdb.org/t/p/w154/${movie?.production_companies[0].logo_path}`}
+                    alt=""
+                    className="absolute z-50 top-5 right-10  p-2 rounded-full"
+                  />
+                )}
+
                 <h1 className="absolute top-5 left-5 font-bold text-2xl after:content-[''] after:block after:w-20 after:h-1 after:bg-yellow-400">
                   Movie Details
                 </h1>
@@ -104,7 +107,6 @@ const MovieDetailPage = () => {
               </div>
             </div>
 
-
             <div className={` lg:hidden flex-0  w-full  bg-neutral-600 `}>
               <div className="relative w-full ">
                 <img
@@ -112,21 +114,24 @@ const MovieDetailPage = () => {
                   alt=""
                   className="brightness-50 w-full h-[400px] object-cover"
                 />
-                <img
-                  src={`https://image.tmdb.org/t/p/w92/${movie?.production_companies[0].logo_path}`}
-                  alt=""
-                  className="absolute z-50 top-5 right-10  p-2 rounded-full"
-                />
+                {movie?.production_companies[0].logo_path && (
+                  <img
+                    src={`https://image.tmdb.org/t/p/w92/${movie?.production_companies[0].logo_path}`}
+                    alt=""
+                    className="absolute z-50 top-5 right-10  p-2 rounded-full"
+                  />
+                )}
+
                 <h1 className="absolute top-5 left-5 font-bold text-2xl after:content-[''] after:block after:w-20 after:h-1 after:bg-yellow-400">
                   Movie Details
                 </h1>
-                  
-                    <img
-                      src={`https://image.tmdb.org/t/p/w154/${movie?.poster_path}`}
-                      alt=""
-                      className="absolute left-10 top-45"
-                    />
-                  
+
+                <img
+                  src={`https://image.tmdb.org/t/p/w154/${movie?.poster_path}`}
+                  alt=""
+                  className="absolute left-10 top-45"
+                />
+
                 <div className=" overflow-hidden">
                   <div className="flex-1 bg-neutral-800 p-5">
                     <h1 className="font-bold text-2xl text-yellow-400">
