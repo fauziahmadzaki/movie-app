@@ -47,7 +47,7 @@ const MovieDetailPage = () => {
                   alt=""
                   className="brightness-50 w-full h-[600px] object-cover"
                 />
-                {movie?.production_companies[0].logo_path && (
+                {movie?.production_companies[0] && movie?.production_companies[0].logo_path && (
                   <img
                     src={`https://image.tmdb.org/t/p/w154/${movie?.production_companies[0].logo_path}`}
                     alt=""
@@ -75,9 +75,12 @@ const MovieDetailPage = () => {
                       Release On:{" "}
                       {movie?.release_date && formatDate(movie?.release_date)}
                     </p>
+                    {movie?.production_companies[0] &&
+                    
                     <p className="font-semibold text-yellow-400 capitalize">
-                      By {movie?.production_companies[0].name}
+                      By { movie?.production_companies[0].name}
                     </p>
+                    }
                     <div className="mt-3">
                       <p className="font-semibold">Overview</p>
                       <p className="text-sm">{movie?.overview}</p>
@@ -114,7 +117,7 @@ const MovieDetailPage = () => {
                   alt=""
                   className="brightness-50 w-full h-[400px] object-cover"
                 />
-                {movie?.production_companies[0].logo_path && (
+                {movie?.production_companies[0] && movie?.production_companies[0].logo_path && (
                   <img
                     src={`https://image.tmdb.org/t/p/w92/${movie?.production_companies[0].logo_path}`}
                     alt=""
@@ -142,9 +145,12 @@ const MovieDetailPage = () => {
                       Release On:{" "}
                       {movie?.release_date && formatDate(movie?.release_date)}
                     </p>
+                    {movie?.production_companies[0] &&
+                    
                     <p className="font-semibold text-yellow-400 capitalize">
-                      By {movie?.production_companies[0].name}
+                      By { movie?.production_companies[0].name}
                     </p>
+                    }
                     <div className="mt-3">
                       <p className="font-semibold">Overview</p>
                       <p className="text-sm">{movie?.overview}</p>
